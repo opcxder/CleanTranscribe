@@ -1,0 +1,45 @@
+{
+  "name": "timestamp-remover-client",
+  "version": "1.0.0",
+  "description": "Frontend client for Timestamp Remover - Extract clean transcripts from YouTube videos",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "keywords": [
+    "youtube",
+    "transcript",
+    "timestamp",
+    "nextjs",
+    "react",
+    "tailwind"
+  ],
+  "author": "Timestamp Remover Team",
+  "license": "MIT",
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.1.0",
+    "axios": "^1.7.3",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.3.21",
+    "jspdf": "^3.0.3",
+    "lucide-react": "^0.424.0",
+    "next": "14.2.5",
+    "react": "^18",
+    "react-dom": "^18",
+    "tailwind-merge": "^2.4.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
