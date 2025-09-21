@@ -11,7 +11,7 @@ const port = process.env.PORT || 3001;
 // Enhanced CORS configuration
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://your-domain.com'] 
+    ? ['https://cleantranscribe.vercel.app', 'https://cleantranscribe.onrender.com'] 
     : ['http://localhost:3000', 'http://localhost:3001'],
   credentials: true
 }));
