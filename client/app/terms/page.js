@@ -62,7 +62,7 @@ export default function TermsAndConditions() {
   const importantPoints = [
     {
       title: "No Warranty",
-      content: "The service is provided 'as is' without any warranty of any kind, express or implied."
+      content: "The service is provided &apos;as is&apos; without any warranty of any kind, express or implied."
     },
     {
       title: "Limitation of Liability",
@@ -177,16 +177,16 @@ export default function TermsAndConditions() {
           <div className="bg-yellow-50 rounded-lg p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">YouTube API Terms</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Our service uses YouTube's API to extract transcripts. By using our service, you also agree to be bound by YouTube's Terms of Service and API terms. You acknowledge that:
+              Our service uses YouTube&apos;s API to extract transcripts. By using our service, you also agree to be bound by YouTube&apos;s Terms of Service and API terms. You acknowledge that:
             </p>
             <ul className="space-y-2 text-gray-700">
               <li className="flex items-start gap-2">
                 <div className="w-2 h-2 bg-yellow-600 rounded-full mt-2 flex-shrink-0"></div>
-                <span>YouTube content is subject to YouTube's terms and policies</span>
+                <span>YouTube content is subject to YouTube&apos;s terms and policies</span>
               </li>
               <li className="flex items-start gap-2">
                 <div className="w-2 h-2 bg-yellow-600 rounded-full mt-2 flex-shrink-0"></div>
-                <span>Transcript availability depends on YouTube's API and video settings</span>
+                <span>Transcript availability depends on YouTube&apos;s API and video settings</span>
               </li>
               <li className="flex items-start gap-2">
                 <div className="w-2 h-2 bg-yellow-600 rounded-full mt-2 flex-shrink-0"></div>
@@ -210,7 +210,7 @@ export default function TermsAndConditions() {
           <div className="bg-green-50 rounded-lg p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Changes to These Terms</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days' notice prior to any new terms taking effect.
+              We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days&apos; notice prior to any new terms taking effect.
             </p>
             <p className="text-gray-700 leading-relaxed">
               By continuing to access or use our service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the service.

@@ -225,7 +225,7 @@ export default function Home() {
                     Ready to get started?
                   </CardTitle>
                   <CardDescription className="text-lg text-muted-foreground">
-                    Just paste a YouTube link and we'll do the rest
+                    Just paste a YouTube link and we&apos;ll do the rest
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="pointer-events-auto relative z-10">
@@ -401,7 +401,7 @@ export default function Home() {
                   ))}
                 </div>
                 <p className="text-gray-200 mb-4 italic">
-                  "{testimonial.content}"
+                  &quot;{testimonial.content}&quot;
                 </p>
                 <div>
                   <p className="font-semibold text-white">{testimonial.name}</p>

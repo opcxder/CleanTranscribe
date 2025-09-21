@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams, useRouter, usePathname } from 'next/navigation'
 import axios from 'axios'
 import { motion } from 'framer-motion'
@@ -13,7 +13,7 @@ import Footer from '@/components/Footer'
 import TranscriptDisplay from '@/components/TranscriptDisplay'
 import LoadingSkeleton from '@/components/LoadingSkeleton'
 
-export default function Result() {
+function ResultContent() {
   const [transcript, setTranscript] = useState('')
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(true)
@@ -22,12 +22,12 @@ export default function Result() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const pathname = usePathname()
-  const url = searchParams.get('url')
+  const url = searchParams?.get('url')
 
   useEffect(() => {
     if (url) {
       fetchTranscript(url)
-    } else {
+    } else if (searchParams) {
       setError('No video URL provided. Please go back and enter a valid YouTube URL.')
       setLoading(false)
     }
@@ -35,7 +35,7 @@ export default function Result() {
     return () => {
       setLoading(false)
     }
-  }, [url])
+  }, [url, searchParams])
 
   const fetchTranscript = async (videoUrl) => {
     const startTime = Date.now()
@@ -89,7 +89,9 @@ export default function Result() {
     setError('')
     setLoading(true)
     setRetryCount(prev => prev + 1)
-    fetchTranscript(url)
+    if (url) {
+      fetchTranscript(url)
+    }
   }
 
   const handleGoBack = () => {
@@ -177,7 +179,7 @@ export default function Result() {
                   Oops! Something went wrong
                 </h1>
                 <p className="text-xl text-gray-300">
-                  We couldn't extract the transcript from this video
+                  We couldn&apos;t extract the transcript from this video
                 </p>
               </div>
               
@@ -185,7 +187,7 @@ export default function Result() {
                 <CardHeader>
                   <CardTitle className="text-red-400">Error Details</CardTitle>
                   <CardDescription className="text-gray-300">
-                    Here's what happened and how to fix it
+                    Here&apos;s what happened and how to fix it
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
@@ -317,7 +319,7 @@ export default function Result() {
                       🔒 Your Privacy is Protected
                     </h3>
                     <p className="text-sm text-gray-300 mb-4">
-                      We don't store your transcripts or video data. Everything is processed securely and deleted immediately.
+                      We don&apos;t store your transcripts or video data. Everything is processed securely and deleted immediately.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4 text-xs text-gray-400">
                       <span>✓ No data storage</span>
@@ -334,5 +336,13 @@ export default function Result() {
       </main>
       <Footer />
     </div>
+  )
+}
+
+export default function Result() {
+  return (
+    <Suspense fallback={<LoadingSkeleton />}>
+      <ResultContent />
+    </Suspense>
   )
 }

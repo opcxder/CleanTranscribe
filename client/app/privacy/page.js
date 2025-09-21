@@ -146,7 +146,7 @@ export default function PrivacyPolicy() {
           <div className="bg-yellow-50 rounded-lg p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Third-Party Services</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              We use YouTube's public API to extract transcripts. This process is subject to YouTube's own privacy policies and terms of service. We do not share your data with any other third-party services.
+              We use YouTube&apos;s public API to extract transcripts. This process is subject to YouTube&apos;s own privacy policies and terms of service. We do not share your data with any other third-party services.
             </p>
             <p className="text-gray-700 leading-relaxed">
               We may use basic analytics tools to understand usage patterns, but these do not collect personally identifiable information.
@@ -168,7 +168,7 @@ export default function PrivacyPolicy() {
           <div className="bg-gray-50 rounded-lg p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Changes to This Policy</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the &quot;Last updated&quot; date at the top.
+              We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the “Last updated” date at the top.
             </p>
             <p className="text-gray-700 leading-relaxed">
               You are advised to review this Privacy Policy periodically for any changes. Changes to this policy are effective when they are posted on this page.
