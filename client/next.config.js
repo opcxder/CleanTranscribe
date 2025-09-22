@@ -10,9 +10,7 @@ const nextConfig = {
       },
     ];
   },
-  images: {
-    domains: ["img.youtube.com"],
-  },
+  images: { domains: ["img.youtube.com"] },
   experimental: {
     serverComponentsExternalPackages: ["youtube-transcript-api"],
   },
